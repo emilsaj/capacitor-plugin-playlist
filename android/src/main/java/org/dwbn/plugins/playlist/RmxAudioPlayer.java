@@ -101,8 +101,7 @@ public class RmxAudioPlayer implements PlaybackStatusListener<AudioTrack>,
         playlistManager.setVolume(left, right);
     }
 
-    public void onActualCompletion(AudioTrack item) {
-        System.out.println(item);
+    public void onCompletion(AudioTrack item) {
         if (item != null) {
             String trackId = item.getTrackId();
             JSONObject trackStatus = getPlayerStatus(item);
